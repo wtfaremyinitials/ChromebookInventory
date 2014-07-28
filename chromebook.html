@@ -1,0 +1,27 @@
+<head>
+  <title>chromebooks db</title>
+</head>
+
+<body>
+    {{>home}}
+</body>
+
+<template name="home">
+  Total entries: {{count}}
+  <table border="1">
+      <tr>
+          <td>Serial #</td>
+          <td>Mac Addr</td>
+      </tr>
+      {{#each chromebooks}}
+          <tr>
+              <td>{{serial}}</td>
+              <td>{{mac}}</td>
+          </tr>
+      {{/each}}
+  </table>
+  <div id="inputs">
+      <input id="serial" type="text" placeholder="serial #">
+      <input id="mac"    type="text" placeholder="mac">
+  </div>
+</template>
